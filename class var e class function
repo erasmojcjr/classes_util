@@ -1,0 +1,12 @@
+class Valores {
+  static int vezesClicado; // equeivalente ao class var do delphi
+  
+  static void classvar(){ // equeivalente ao class function ou procedure  do delphi
+    print('class var');
+  }
+}
+
+void main() {
+  Valores.vezesClicado = 2;
+  Valores.classvar();
+}

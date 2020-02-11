@@ -1,0 +1,50 @@
+class Animal {
+  String nome;
+  double peso;
+
+  void comer() {
+    print('$nome Comeu!');
+  }
+
+  Animal(this.nome, this.peso);
+}
+
+class Cachorro extends Animal {
+  void latir() {
+    print('$nome latiu!');
+  }
+  // super e usado quando o atibuto usado no construtor vem da classe pai
+  Cachorro(String nome, double peso) : super(nome, peso); 
+
+  @override // sobrescrita de metodo
+    void comer() {
+    print('$nome Comeu pra caralho!');
+  }
+}
+
+class Gato extends Animal {
+  void miar() {
+    print('$nome fez mial');
+  }
+  
+  bool amigavel(){
+    return true;
+  }
+   // super e usado quando o atibuto usado no construtor vem da classe pai
+  Gato(String nome, double peso) : super(nome, peso); // construtor
+}
+
+void main() {
+  Cachorro cachorro1 = Cachorro('Pitucha', 20.00);
+  cachorro1.latir();
+  cachorro1.comer();
+  
+  Gato gato1 = Gato('Bixano', 20.00);
+  gato1.miar();
+  gato1.comer();
+  print('esta amigavel? ${gato1.amigavel()}');
+}
+
+
+
+

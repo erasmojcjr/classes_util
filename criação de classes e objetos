@@ -1,0 +1,64 @@
+class Pessoa {
+  String nome;
+  int _idade; // atrubuto com _ só pode ser acessado de dentro do objeto variavel do tipo private
+  double altura;
+
+  //contrutor Dart
+  Pessoa(this.nome, this._idade, this.altura);
+
+  Pessoa.nascer(this.nome, this.altura) {
+    this._idade = 0;
+    dormir();
+  }
+/* construtor convencional 
+  Pessoa(String nome, int idade, double altura){
+  this.nome = nome;
+  this.idade = idade;
+  this.altura = altura;
+}*/
+
+  void dormir() {
+    print('$nome esta dormindo!');
+  }
+
+  void aniver() {
+    _idade++;
+  }
+  /* metodo get convencional 
+  int get idade {
+    return _idade;
+  }
+  */
+  
+  /// metodo get Dart
+  int get idade => _idade;
+  
+  //metodo set convencional 
+   set idade( int idade){
+     if (idade > 0 && idade < 999){
+       _idade = idade;
+     }
+   }
+    
+   
+   
+}
+
+void main() {
+  Pessoa pessoa1 = Pessoa('Erasmo', 33, 1.80);
+
+  Pessoa pessoa2 = Pessoa('Tiago', 25, 1.78);
+  
+  pessoa1.idade = 50;
+  print(pessoa1.nome);
+  pessoa1.aniver();
+  print(pessoa1.idade);
+  pessoa1.dormir();
+
+  print(pessoa2.nome);
+  pessoa2.aniver();
+  print(pessoa2.idade);
+  pessoa2.dormir();
+
+  Pessoa pesoa3 = Pessoa.nascer('Joao', 0.60);
+}

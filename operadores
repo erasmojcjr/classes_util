@@ -1,0 +1,8 @@
+void main() {
+bool resAnd = true && false; // && equivalente ao and do Delphi
+bool resOr = true || false;  // || equivalente ao or do Delphi
+bool resNot = !true;         // ! equivalente ao Not do Delphi  
+String resTri = 5 > 10 ? 'Maior' : 'Menor'; // Equivalente ao IfThen do Delphi
+String nome;
+print(nome ?? 'Vazio'); // caso a string esteja nullo esse comando vai atribuir um valor padrao
+}

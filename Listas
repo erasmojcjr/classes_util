@@ -1,0 +1,29 @@
+class Pessoa {
+  String nome;
+  int idade;
+  Pessoa(this.nome, this.idade);
+}
+
+void main() {
+  List<String> nomes = ['Erasmo', 'Joao', 'Maria', 'Jose', 'Tiago'];
+
+  nomes.add('Pedro');
+  for (int i = 0; i < nomes.length; i++) {
+    if (nomes[i] == 'Jose') {
+      nomes.removeAt(i);
+    }
+    print(nomes[i]);
+  }
+
+  print(nomes.contains('Erasmo'));
+
+  List<Pessoa> pessoa = List();
+  pessoa.add(Pessoa('Erasmo', 30));
+  pessoa.add(Pessoa('Joao', 30));
+  pessoa.add(Pessoa('Maria', 30));
+  pessoa.add(Pessoa('Jose', 30));
+  
+  for (Pessoa p in pessoa){
+    print(p.nome);
+  }
+}

@@ -1,0 +1,29 @@
+// classe abstrata não pode ser instanciada
+abstract class Animal {
+  String nome;
+  double peso;
+  String especie;
+
+  // quando o metodo tem {} não e obrigado implementar na classe filha
+  void comer(){
+    
+  }
+ 
+// quando o metodo não tem {} e obrigatorio a implementação na classe filha
+  void andar();
+
+
+}
+
+class Cachorro extends Animal {
+
+
+  @override
+  void andar(){
+    print('$nome andou muito!');
+  }
+  Cachorro(String nome, double peso);
+  
+}
+
+void main() {}

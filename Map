@@ -1,0 +1,27 @@
+class InfoPessoa{
+  int idade;
+  InfoPessoa(this.idade);
+}
+
+void main() {
+  // Map com tipo de dados definidos
+  Map<int, String> ddds = Map();
+  ddds[11] = 'São Paulo';
+  ddds[63] = 'Tocantins';
+  ddds[19] = 'Campinas';
+  print(ddds.keys);
+  print(ddds.values);
+
+// Map com tipo de dados dinamico
+  Map<String, dynamic> pessoa = Map();
+  pessoa['nome'] = 'Erasmo';
+  pessoa['idade'] = 33;
+  pessoa['altura'] = 1.80;
+  
+  // Map com objetos
+  Map<String, InfoPessoa> pessoas = Map();
+  pessoas['Erasmo'] = InfoPessoa(33);
+  pessoas['Heitor'] = InfoPessoa(4);
+  pessoas['Pollyanna'] = InfoPessoa(31);
+  
+}

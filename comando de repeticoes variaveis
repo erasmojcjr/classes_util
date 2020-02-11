@@ -1,0 +1,60 @@
+void main() {
+ double nota = 10;
+ 
+  if (nota < 5) {
+    print('reprovado!');
+  }
+ 
+  if ((nota > 5) & (nota < 9)) {
+    print('Passou de ano!');
+  
+ } else if (nota == 10) {
+     print('Parabens tu e picatofly');
+ } 
+ 
+ bool aprovado = false;
+ String info;
+ String nome;
+ String info2 = nome ?? 'Não informado';
+ 
+ print(info2);
+  
+ info = aprovado ? 'Aprovado' : 'reprovado';
+  
+ print(info);
+  
+ 
+ String linguagem = 'Delphi'; 
+ 
+  switch(linguagem){
+    case 'Dart':
+      print('Dart e vida');
+    break;
+    
+    case 'Java':
+      print('Java não e mara');
+    break;
+   
+   case 'Delphi':
+     print('Delphi paga boleto');
+   break;
+   
+   default:
+     print('não e nada importante');
+  }
+  for (int i = 1; i < 11; i++){
+   print(i);  
+  }
+  
+  int j = 0;
+  while(j < 10){
+    print(j);
+    j++;
+  }
+int k = 0;
+  do {
+    print(k);
+    k++;
+  } while (k < 10);
+ 
+}

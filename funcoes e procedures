@@ -1,0 +1,49 @@
+void main() {
+  printintroducao('Bem vindo ao app');
+}
+
+void printintroducao(String pintro) {
+  print(pintro);
+  calcSoma(10, 10);
+  print(CalcMult(10, 10));
+  print(CalcAreaCirbulo(10));
+  // chamada da função com parametros opcionais
+  CriarBotao('botaoSair');
+  CriarBotao('botaoSair', cor: 'Preto');
+  CriarBotao('botaoSair', cor: 'Branco', largura: 20);
+  CriaroutroBotao('botaoSair', botaoCriado, cor: 'Branco', largura: 20);
+  CriaroutroBotao('BotaoCamera', () {
+    print('botao criado por func anonima');
+  });
+  
+}
+
+void calcSoma(double a, double b) {
+  double res = a + b;
+  print(res);
+}
+
+double CalcMult(double a, double b) {
+  double res = a * b;
+  return res;
+}
+
+double CalcAreaCirbulo(double raio) => 3.14 * raio * raio;
+
+void botaoCriado() {
+  print('Botao Criado!!');
+}
+
+// usa  chaves {} para definir paramentros opcionais em funções
+void CriarBotao(String texto, {String cor, double largura}) {
+  print(texto);
+  print(cor ?? 'Preto');
+  print(largura ?? 25);
+}
+
+void CriaroutroBotao(String texto, Function criadoFunc,{ String cor, double largura}) {
+  print(texto);
+  print(cor ?? 'Preto');
+  print(largura ?? 25);
+  criadoFunc();
+}
